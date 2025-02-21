@@ -1,6 +1,8 @@
 # Angular Todo List
 
 A simple, lightweight todo list application built with Angular. This project was created as part of my Angular learning journey and demonstrates fundamental concepts of component-based architecture and state management.
+![image](https://github.com/user-attachments/assets/36cd8ce0-9848-4594-8d63-24af28c145aa)
+
 
 ## Features
 - Add, edit, and delete tasks
