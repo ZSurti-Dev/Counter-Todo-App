@@ -1,4 +1,15 @@
-# TodoApp
+# Angular Todo List
+
+A simple, lightweight todo list application built with Angular. This project was created as part of my Angular learning journey and demonstrates fundamental concepts of component-based architecture and state management.
+
+## Features
+- Add, edit, and delete tasks
+- Mark tasks as complete/incomplete
+- Local storage persistence
+- Responsive design for desktop and mobile
+
+This project showcases my growing understanding of Angular concepts like components, services, data binding, and Angular CLI. Feel free to explore the code and suggest improvements!
+
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
 

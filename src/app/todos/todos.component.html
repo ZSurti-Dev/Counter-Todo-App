@@ -1,0 +1,46 @@
+<div class="todo-container">
+    <h3 class="title">My Simple Todo List</h3>
+    
+    <!-- Add Todo Form -->
+    <div class="add-todo">
+      <input 
+        type="text" 
+        placeholder="What do you need to do?"
+        #newTodo
+        (keyup.enter)="addTodo(newTodo.value); newTodo.value = ''"
+      >
+      <button (click)="addTodo(newTodo.value); newTodo.value = ''">
+        Add
+      </button>
+    </div>
+  
+    <!-- Empty State -->
+    <div *ngIf="todos.length === 0" class="empty-state">
+      Your list is empty. Add your first task above!
+    </div>
+    
+    <!-- Todo List -->
+    <ul class="todos">
+      <li class="todos__item" *ngFor="let todo of todos; let i = index" [class.fade-out]="todo.completed">
+        <div class="todos__content">
+          <label class="todos__checkbox">
+            <input 
+              type="checkbox" 
+              [checked]="todo.completed"
+              (change)="completeTodo(i)"
+            >
+            <span class="checkmark"></span>
+          </label>
+          <h4 [class.completed]="todo.completed">{{ todo.title }}</h4>
+        </div>
+        <button class="todos__delete" (click)="deleteTodo(i)">
+          ×
+        </button>
+      </li>
+    </ul>
+    
+    <!-- Todo Stats -->
+    <div class="todo-stats" *ngIf="todos.length > 0">
+      <p>{{ getCompletedCount() }} of {{ todos.length }} tasks completed</p>
+    </div>
+  </div>
